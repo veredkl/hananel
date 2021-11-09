@@ -8,4 +8,4 @@ include_directories(.)
 add_executable(hananelProject2
         anomaly_detection_util.cpp
         anomaly_detection_util.h
-        main.cpp)
+        main.cpp SimpleAnomalyDetector.h)
