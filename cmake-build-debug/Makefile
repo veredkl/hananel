@@ -143,6 +143,60 @@ hananelProject2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hananelProject2.dir/build.make CMakeFiles/hananelProject2.dir/build
 .PHONY : hananelProject2/fast
 
+SimpleAnomalyDetector.o: SimpleAnomalyDetector.cpp.o
+
+.PHONY : SimpleAnomalyDetector.o
+
+# target to build an object file
+SimpleAnomalyDetector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hananelProject2.dir/build.make CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o
+.PHONY : SimpleAnomalyDetector.cpp.o
+
+SimpleAnomalyDetector.i: SimpleAnomalyDetector.cpp.i
+
+.PHONY : SimpleAnomalyDetector.i
+
+# target to preprocess a source file
+SimpleAnomalyDetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hananelProject2.dir/build.make CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.i
+.PHONY : SimpleAnomalyDetector.cpp.i
+
+SimpleAnomalyDetector.s: SimpleAnomalyDetector.cpp.s
+
+.PHONY : SimpleAnomalyDetector.s
+
+# target to generate assembly for a file
+SimpleAnomalyDetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hananelProject2.dir/build.make CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.s
+.PHONY : SimpleAnomalyDetector.cpp.s
+
+TimeSeries.o: TimeSeries.cpp.o
+
+.PHONY : TimeSeries.o
+
+# target to build an object file
+TimeSeries.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hananelProject2.dir/build.make CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o
+.PHONY : TimeSeries.cpp.o
+
+TimeSeries.i: TimeSeries.cpp.i
+
+.PHONY : TimeSeries.i
+
+# target to preprocess a source file
+TimeSeries.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hananelProject2.dir/build.make CMakeFiles/hananelProject2.dir/TimeSeries.cpp.i
+.PHONY : TimeSeries.cpp.i
+
+TimeSeries.s: TimeSeries.cpp.s
+
+.PHONY : TimeSeries.s
+
+# target to generate assembly for a file
+TimeSeries.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hananelProject2.dir/build.make CMakeFiles/hananelProject2.dir/TimeSeries.cpp.s
+.PHONY : TimeSeries.cpp.s
+
 anomaly_detection_util.o: anomaly_detection_util.cpp.o
 
 .PHONY : anomaly_detection_util.o
@@ -206,6 +260,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hananelProject2"
+	@echo "... SimpleAnomalyDetector.o"
+	@echo "... SimpleAnomalyDetector.i"
+	@echo "... SimpleAnomalyDetector.s"
+	@echo "... TimeSeries.o"
+	@echo "... TimeSeries.i"
+	@echo "... TimeSeries.s"
 	@echo "... anomaly_detection_util.o"
 	@echo "... anomaly_detection_util.i"
 	@echo "... anomaly_detection_util.s"

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o"
+  "CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o"
   "CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.o"
   "CMakeFiles/hananelProject2.dir/main.cpp.o"
   "hananelProject2"

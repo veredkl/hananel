@@ -23,7 +23,7 @@ float var(float* x, int size) {
     float varX = sum1/size;
     return varX;
 
-}https://github.com/veredkl/hananel.git
+}//https://github.com/veredkl/hananel.git
 // returns the covariance of X and Y
 float cov(float* x, float* y, int size) {
     float sum = 0;

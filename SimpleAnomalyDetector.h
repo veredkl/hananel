@@ -12,9 +12,11 @@
 #include <algorithm>
 #include <string.h>
 #include <math.h>
+#include <vector>
+#include <string>
 
 struct correlatedFeatures{
-    string feature1,feature2;  // names of the correlated features
+    std::string feature1,feature2;  // names of the correlated features
     float corrlation;
     Line lin_reg;
     float threshold;
@@ -22,7 +24,7 @@ struct correlatedFeatures{
 
 
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
-    vector<correlatedFeatures> cf;
+    std::vector<correlatedFeatures> cf;
 public:
     SimpleAnomalyDetector();
     virtual ~SimpleAnomalyDetector();

@@ -84,7 +84,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/rivka/CLionProjects/hananelProject2/SimpleAnomalyDetector.cpp">
+			<Option target="hananelProject2"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/rivka/CLionProjects/hananelProject2/SimpleAnomalyDetector.h">
+			<Option target="hananelProject2"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/rivka/CLionProjects/hananelProject2/TimeSeries.cpp">
+			<Option target="hananelProject2"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/rivka/CLionProjects/hananelProject2/TimeSeries.h">
 			<Option target="hananelProject2"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/rivka/CLionProjects/hananelProject2/anomaly_detection_util.cpp">

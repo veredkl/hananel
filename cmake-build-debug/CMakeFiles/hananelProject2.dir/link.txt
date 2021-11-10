@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.o CMakeFiles/hananelProject2.dir/main.cpp.o  -o hananelProject2 
+/usr/bin/c++  -g   CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.o CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o CMakeFiles/hananelProject2.dir/main.cpp.o  -o hananelProject2 

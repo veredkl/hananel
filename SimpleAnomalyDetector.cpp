@@ -4,19 +4,26 @@
 #include "SimpleAnomalyDetector.h"
 #include "TimeSeries.h"
 #include "anomaly_detection_util.h"
+#include <cmath>
 
-SimpleAnomalyDetector();
-virtual ~SimpleAnomalyDetector();
+using namespace srd;
 
-virtual void learnNormal(const TimeSeries& ts){
+SimpleAnomalyDetector(){
 
-    for (int i = 0; i < featureS() ; ++i) {
-        List<int><int>;
+}
+virtual ~SimpleAnomalyDetector(){
+
+}
+
+void learnNormal(const TimeSeries& ts){
+
+    for (int i = 0; i < ts.featureS() ; ++i) {
+
         float maxValue = 0;
         float pears = 0;
         int index = 0;
         for (int j = i+1; j <ts.featureS() ; ++j) {
-           pears =  math.abs(pearson(ts.,ts.getDataT()[j],ts.featureS());
+           pears = std::abs(pearson(ts,ts.getDataT()[j],ts.featureS());
            if(pears > maxValue){
                maxValue = pears;
                index = j;
@@ -25,15 +32,15 @@ virtual void learnNormal(const TimeSeries& ts){
         }
 
         if(p){
-            correlatedFeatures  cr = new correlatedFeatures;
-            cr.corrlation = maxValue;
-            cr.feature1 = ts. ;
-            cr.feature2 = ts.   ;
+            correlatedFeatures * cr = new correlatedFeatures;
+            cr->corrlation = maxValue;
+            cr->feature1 = ts. ;
+            cr->feature2 = ts. ;
             cr.lin_reg =
         }
 
     }
 }
-virtual vector<AnomalyReport> detect(const TimeSeries& ts);
+vector<AnomalyReport> detect(const TimeSeries& ts);
 vector<correlatedFeatures> getNormalModel();
 

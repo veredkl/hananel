@@ -3,25 +3,31 @@
 //
 
 #include "TimeSeries.h"
+ using namespace std;
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <fstream>
 
 //this function open,read and close the csv file
-TimeSeries::TimeSeries(const char *CSVfile) {
+TimeSeries::TimeSeries(const char* CSVfile) {
     ifstream CSV;
     CSV.open(CSVfile);
     if (!CSVfile.is_open()) {
         throw runtime_error("couldn't open this file.");
     }
-    readTheTitel(CSVfile);
+    readTheTitle(CSVfile);
     readTheTable(CSVfile);
     CSV.close();
 }
 //function to read the title (first line) of the table
 void TimeSeries::readTheTitle(const char *CSVfile) {
 
-    string line; //first line of the table
+   string line; //first line of the table
     getline(CSVfile, line);
     list<string> firstLine = seperationOfWords(line);
-    features = firstLine;
+    feature = firstLine;
 
 }
 //function to read the whole table and push to the dataT (data table)
@@ -33,7 +39,7 @@ void TimeSeries::readTheTable(const char *CSVfile)  {
     }
 
     while (getline(CSVfile, line)) {
-       list<string> seperations = seperationOfWords(line)
+       list<string> seperations = seperationOfWords(line);
         for (int i = 0; i < feature.size(); ++i) {
             dataT.at(i).push_back(stof(seperations.front()));
             seperations.pop_front();
@@ -42,7 +48,7 @@ void TimeSeries::readTheTable(const char *CSVfile)  {
 
 }
 //this function seperate between the words of the line between each comma
-list<string> seperationOfWords(string line) {
+list<string> TimeSeries::seperationOfWords(string line) {
 
     int comma = 0 , start = 0;
     string str;
@@ -69,3 +75,4 @@ int TimeSeries::featureS() const {
 vector<float> TimeSeries::getAFeature(int index) const {
     return dataT.at(index);
 }
+

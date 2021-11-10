@@ -90,9 +90,35 @@ CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/rivka/CLionProjects/hananelProject2/anomaly_detection_util.cpp -o CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.s
 
+CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o: CMakeFiles/hananelProject2.dir/flags.make
+CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o: ../TimeSeries.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o -c /mnt/c/Users/rivka/CLionProjects/hananelProject2/TimeSeries.cpp
+
+CMakeFiles/hananelProject2.dir/TimeSeries.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hananelProject2.dir/TimeSeries.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/rivka/CLionProjects/hananelProject2/TimeSeries.cpp > CMakeFiles/hananelProject2.dir/TimeSeries.cpp.i
+
+CMakeFiles/hananelProject2.dir/TimeSeries.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hananelProject2.dir/TimeSeries.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/rivka/CLionProjects/hananelProject2/TimeSeries.cpp -o CMakeFiles/hananelProject2.dir/TimeSeries.cpp.s
+
+CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o: CMakeFiles/hananelProject2.dir/flags.make
+CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o: ../SimpleAnomalyDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o -c /mnt/c/Users/rivka/CLionProjects/hananelProject2/SimpleAnomalyDetector.cpp
+
+CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/rivka/CLionProjects/hananelProject2/SimpleAnomalyDetector.cpp > CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.i
+
+CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/rivka/CLionProjects/hananelProject2/SimpleAnomalyDetector.cpp -o CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.s
+
 CMakeFiles/hananelProject2.dir/main.cpp.o: CMakeFiles/hananelProject2.dir/flags.make
 CMakeFiles/hananelProject2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hananelProject2.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hananelProject2.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hananelProject2.dir/main.cpp.o -c /mnt/c/Users/rivka/CLionProjects/hananelProject2/main.cpp
 
 CMakeFiles/hananelProject2.dir/main.cpp.i: cmake_force
@@ -106,16 +132,20 @@ CMakeFiles/hananelProject2.dir/main.cpp.s: cmake_force
 # Object files for target hananelProject2
 hananelProject2_OBJECTS = \
 "CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.o" \
+"CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o" \
+"CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o" \
 "CMakeFiles/hananelProject2.dir/main.cpp.o"
 
 # External object files for target hananelProject2
 hananelProject2_EXTERNAL_OBJECTS =
 
 hananelProject2: CMakeFiles/hananelProject2.dir/anomaly_detection_util.cpp.o
+hananelProject2: CMakeFiles/hananelProject2.dir/TimeSeries.cpp.o
+hananelProject2: CMakeFiles/hananelProject2.dir/SimpleAnomalyDetector.cpp.o
 hananelProject2: CMakeFiles/hananelProject2.dir/main.cpp.o
 hananelProject2: CMakeFiles/hananelProject2.dir/build.make
 hananelProject2: CMakeFiles/hananelProject2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hananelProject2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hananelProject2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hananelProject2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
