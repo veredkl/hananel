@@ -5,7 +5,13 @@
 #ifndef HANANELPROJECT2_ANOMALYDETECTOR_H
 #define HANANELPROJECT2_ANOMALYDETECTOR_H
 
-class TimeSeries{/*...*/};
+#include <string>
+#include <vector>
+#include "TimeSeries.h"
+
+using namespace std;
+
+// class TimeSeries{/*...*/};
 class AnomalyReport{
 public:
     const string description;
