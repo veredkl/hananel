@@ -7,6 +7,8 @@
 
 
 class TimeSeries {
+    vector<string> feature;
+    vector<vector<float>> dataT
 
 };
 
