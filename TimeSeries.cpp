@@ -5,11 +5,13 @@
 #include "TimeSeries.h"
 
 
-void TimeSeries::readCSVFile(const char *CSVfileName) {
-    ifstream CSVfile(CSVfileName);
+void TimeSeries::readCSVFile(const char *CSVfile) {
+    ifstream CSV;
+    CSV.open(CSVfile);
     if (!CSVfile.is_open()) {
         throw runtime_error("couldn't open this file.");
     }
+
     string line;
     //getting the first line from the file(the names of the features).
     getline(CSVfile, line);
