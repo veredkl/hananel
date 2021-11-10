@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afea9a56-4548-499d-9e5f-35aa0f77fa53" name="Changes" comment="hi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimeSeries.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TimeSeries.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +26,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="200LOeAgx53vl2iFI4kjaMHeJ4H" />
   <component name="ProjectLevelVcsManager">
@@ -57,11 +66,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -71,12 +75,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635176527745</updated>
-      <workItem from="1635176529026" duration="899000" />
-      <workItem from="1635254065271" duration="1062000" />
-      <workItem from="1635411628271" duration="74000" />
-      <workItem from="1635856039843" duration="737000" />
-      <workItem from="1635856815646" duration="1000" />
-      <workItem from="1636546168679" duration="1232000" />
+      <workItem from="1635176529026" duration="581000" />
+      <workItem from="1636458853132" duration="2000" />
     </task>
     <task id="LOCAL‎00001" summary="hi">
       <created>1635176641454</created>
@@ -84,25 +84,7 @@
       <option name="presentableId" value="LOCAL‎00001" />
       <updated>1635176641454</updated>
     </task>
-    <task id="LOCAL‎00002" summary="hi">
-      <created>1635177127432</created>
-      <option name="number" value="LOCAL‎00002" />
-      <option name="presentableId" value="LOCAL‎00002" />
-      <updated>1635177127432</updated>
-    </task>
-    <task id="LOCAL‎00003" summary="hi">
-      <created>1635177316060</created>
-      <option name="number" value="LOCAL‎00003" />
-      <option name="presentableId" value="LOCAL‎00003" />
-      <updated>1635177316060</updated>
-    </task>
-    <task id="LOCAL‎00004" summary="hi">
-      <created>1636546539922</created>
-      <option name="number" value="LOCAL‎00004" />
-      <option name="presentableId" value="LOCAL‎00004" />
-      <updated>1636546539922</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
