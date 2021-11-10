@@ -4,20 +4,18 @@
 
 #include "TimeSeries.h"
 
+//this function open,read and close the csv file
 TimeSeries::TimeSeries(const char *CSVfile) {
     ifstream CSV;
     CSV.open(CSVfile);
     if (!CSVfile.is_open()) {
         throw runtime_error("couldn't open this file.");
     }
-
     readTheTitel(CSVfile);
-
     readTheTable(CSVfile);
-
     CSV.close();
 }
-
+//function to read the title (first line) of the table
 void TimeSeries::readTheTitle(const char *CSVfile) {
 
     string line; //first line of the table
@@ -26,7 +24,7 @@ void TimeSeries::readTheTitle(const char *CSVfile) {
     features = firstLine;
 
 }
-
+//function to read the whole table and push to the dataT (data table)
 void TimeSeries::readTheTable(const char *CSVfile)  {
     string line;
     for (int i = 0; i < feature.size(); ++i) {
@@ -43,7 +41,7 @@ void TimeSeries::readTheTable(const char *CSVfile)  {
     }
 
 }
-
+//this function seperate between the words of the line between each comma
 list<string> seperationOfWords(string line) {
 
     int comma = 0 , start = 0;
