@@ -9,6 +9,13 @@
 class TimeSeries {
     vector<string> feature;
     vector<vector<float>> dataT
+    void readTheTitle(const char *CSVfile);
+    void readTheTable(const char *CSVfile);
+    list<string> seperationOfWords(string line);
+
+public:
+    const vector<vector<float>> getDataT() const
+    vector<float> getValues(string str) const
 
 };
 
