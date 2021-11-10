@@ -9,19 +9,22 @@ SimpleAnomalyDetector();
 virtual ~SimpleAnomalyDetector();
 
 virtual void learnNormal(const TimeSeries& ts){
+
     for (int i = 0; i < featureS() ; ++i) {
         List<int><int>;
         float maxValue = 0;
-        int index = 0, pears =0 ;
+        float pears = 0;
+        int index = 0;
         for (int j = i+1; j <ts.featureS() ; ++j) {
            pears =  math.abs(pearson(ts.,ts.getDataT()[j],ts.featureS());
            if(pears > maxValue){
                maxValue = pears;
                index = j;
            }
+
         }
 
-        if(p     ){
+        if(p){
             correlatedFeatures  cr = new correlatedFeatures;
             cr.corrlation = maxValue;
             cr.feature1 = ts. ;
