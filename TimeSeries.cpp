@@ -63,3 +63,9 @@ const vector<vector<float>> TimeSeries::getDataT() const {
 vector<float> TimeSeries::getValues(string str) const {
     return getDataT()[str];
 }
+int TimeSeries::featureS() const {
+    return feature.size();
+}
+vector<float> TimeSeries::getAFeature(int index) const {
+    return dataT.at(index);
+}

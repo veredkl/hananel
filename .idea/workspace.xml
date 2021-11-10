@@ -13,6 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="afea9a56-4548-499d-9e5f-35aa0f77fa53" name="Changes" comment="hi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleAnomalyDetector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnomalyDetector.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleAnomalyDetector.h" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnomalyDetector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TimeSeries.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TimeSeries.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimeSeries.h" beforeDir="false" afterPath="$PROJECT_DIR$/TimeSeries.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +59,11 @@
     <configuration name="hananelProject2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hananelProject2" TARGET_NAME="hananelProject2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hananelProject2" RUN_TARGET_NAME="hananelProject2">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>

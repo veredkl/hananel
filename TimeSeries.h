@@ -14,8 +14,10 @@ class TimeSeries {
     list<string> seperationOfWords(string line);
 
 public:
-    const vector<vector<float>> getDataT() const
-    vector<float> getValues(string str) const
+    const vector<vector<float>> getDataT() const;
+    vector<float> getValues(string str) const;
+    int featureS() const;
+    vector<float> getAFeature(int index) const;
 
 };
 
