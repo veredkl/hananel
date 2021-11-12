@@ -19,10 +19,10 @@ int main(){
 
     Point* ps[N];
     for(int i=0;i<N;i++)
-        ps[i]=new Point(x[i],y[i]);
+        ps[i]= new Point();
 
     Line l=linear_reg(ps,N);
-    Point p(4,8);
+    Point p();
 
     float v[]={var(x,N),cov(x,y,N),pearson(x,y,N),l.a,l.b,l.f(4),dev(p,l)};
     float e[]={8.25,16.63,0.999,2.015,0.113,8.176,0.176};

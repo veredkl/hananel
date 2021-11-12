@@ -26,7 +26,7 @@ void TimeSeries::readTheTitle(const char *CSVfile) {
 
    string line; //first line of the table
     getline(CSVfile, line);
-    list<string> firstLine = seperationOfWords(line);
+    vector<string> firstLine = seperationOfWords(line);
     feature = firstLine;
 
 }
@@ -66,13 +66,17 @@ list<string> TimeSeries::seperationOfWords(string line) {
 const vector<vector<float>> TimeSeries::getDataT() const {
     return dataT;
 }
-vector<float> TimeSeries::getValues(string str) const {
-    return getDataT()[str];
-}
+//vector<float> TimeSeries::getValues(string str) const {
+   // return getDataT()[str];
+//}
 int TimeSeries::featureS() const {
     return feature.size();
 }
 vector<float> TimeSeries::getAFeature(int index) const {
     return dataT.at(index);
 }
+vector<string> TimeSeries:: getTheFeaturesName() const {
+    return feature;
+}
+
 

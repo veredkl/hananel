@@ -25,6 +25,7 @@ public:
     vector<float> getValues(string str) const;
     int featureS() const;
     vector<float> getAFeature(int index) const;
+    vector<string> getTheFeaturesName() const;
 
 };
 

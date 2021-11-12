@@ -1,3 +1,3 @@
-/mnt/c/Users/admin/CLionProjects/hananelProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/admin/CLionProjects/hananelProject/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/admin/CLionProjects/hananelProject/cmake-build-debug/CMakeFiles/hananelProject2.dir
+/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/rivka/CLionProjects/hananelProject2/cmake-build-debug/CMakeFiles/hananelProject2.dir
