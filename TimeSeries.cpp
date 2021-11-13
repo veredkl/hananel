@@ -14,15 +14,15 @@
 TimeSeries::TimeSeries(const char* CSVfile) {
     ifstream CSV;
     CSV.open(CSVfile);
-    if (!CSVfile.is_open()) {
+    if (!CSV.is_open()) {
         throw runtime_error("couldn't open this file.");
     }
-    readTheTitle(CSVfile);
-    readTheTable(CSVfile);
+    readTheTitle(CSV);
+    readTheTable(CSV);
     CSV.close();
 }
 //function to read the title (first line) of the table
-void TimeSeries::readTheTitle(const char *CSVfile) {
+void TimeSeries::readTheTitle(ifstream &CSVfile) {
 
    string line; //first line of the table
     getline(CSVfile, line);
@@ -31,7 +31,7 @@ void TimeSeries::readTheTitle(const char *CSVfile) {
 
 }
 //function to read the whole table and push to the dataT (data table)
-void TimeSeries::readTheTable(const char *CSVfile)  {
+void TimeSeries::readTheTable(ifstream &CSVfile)  {
     string line;
     for (int i = 0; i < feature.size(); ++i) {
         vector<float> vect;
@@ -39,27 +39,27 @@ void TimeSeries::readTheTable(const char *CSVfile)  {
     }
 
     while (getline(CSVfile, line)) {
-       list<string> seperations = seperationOfWords(line);
+       vector<string> seperations = seperationOfWords(line);
         for (int i = 0; i < feature.size(); ++i) {
             dataT.at(i).push_back(stof(seperations.front()));
-            seperations.pop_front();
+            //seperations.f;
         }
     }
 
 }
 //this function seperate between the words of the line between each comma
-list<string> TimeSeries::seperationOfWords(string line) {
+vector<string> TimeSeries::seperationOfWords(string line) {
 
     int comma = 0 , start = 0;
     string str;
-    list<string> lis;
+    vector<string> vec;
 
     while (comma <= line.size()) {
         comma = line.find(",", start);
-        lis.push_back(line.substr(start, comma - start));
+        vec.push_back(line.substr(start, comma - start));
         start = comma + 1;
     }
-    return lis;
+    return vec;
 
 }
 
@@ -77,6 +77,12 @@ vector<float> TimeSeries::getAFeature(int index) const {
 }
 vector<string> TimeSeries:: getTheFeaturesName() const {
     return feature;
+}
+int TimeSeries::getFeatureN(string name) const {
+    for (int i = 0; i < feature.size(); ++i) {
+        if (name.compare(feature.at(i)) == 0) return i;
+    }
+    return -1;
 }
 
 

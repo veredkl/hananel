@@ -14,9 +14,9 @@ class TimeSeries {
 
     vector<string> feature;
     vector<vector<float>> dataT;
-    void readTheTitle(const char *CSVfile);
-    void readTheTable(const char *CSVfile);
-    list<string> seperationOfWords(string line);
+    void readTheTitle(ifstream &CSVfile);
+    void readTheTable(ifstream &CSVfile);
+    vector<string> seperationOfWords(string line);
 
 public:
 
@@ -26,6 +26,7 @@ public:
     int featureS() const;
     vector<float> getAFeature(int index) const;
     vector<string> getTheFeaturesName() const;
+    int getFeatureN(string name) const;
 
 };
 

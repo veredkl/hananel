@@ -41,25 +41,49 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
         }
 
         if(pears >= 0.9){
-           struct correlatedFeatures * cr;
-            cr->corrlation = maxValue;
-            cr->feature1 = ts.getTheFeaturesName().at(i);
-            cr->feature2 = ts.getTheFeaturesName().at(index) ;
+           correlatedFeatures cr;
+            cr.corrlation = maxValue;
+            cr.feature1 = ts.getTheFeaturesName().at(i);
+            cr.feature2 = ts.getTheFeaturesName().at(index) ;
+            cr.threshold = 0;
            // float feature1xPoint[cr->feature1.size()];
           //  float feature2yPoint[cr->feature2.size()];
-            Point pointArray[cr->feature1.size()];
-            for (int j = 0; j < cr->feature1.size(); ++j) {
+            Point *pointArray[cr.feature1.size()];
+            for (int j = 0; j < cr.feature1.size(); ++j) {
                 //feature1xPoint[j] = ts.getAFeature(i)[j];
                // feature2yPoint[j] = ts.getAFeature(index)[j];
-                pointArray[j].x = ts.getAFeature(i)[j];
-                pointArray[j].y = ts.getAFeature(index)[j];
+                pointArray[j]->x = ts.getAFeature(i)[j];
+                pointArray[j]->y = ts.getAFeature(index)[j];
             }
-           cr->lin_reg = linear_reg(pointArray,cr->feature1.size());
+           cr.lin_reg = linear_reg(pointArray,cr.feature1.size());
+            for (int j = 0; j < cr.feature1.size(); ++j) {
+                float deviation = dev(*pointArray[j], cr.lin_reg);
+                if(deviation > cr.threshold) {
+                    cr.threshold = deviation*1.1;
+                }
 
+
+            }
+            this->cf.push_back(cr);
         }
-
     }
 }
-vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts);
-vector<correlatedFeatures> SimpleAnomalyDetector::getNormalModel();
+vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts) {
+    vector<float> vec;
+    vector<AnomalyReport> ar;
+    for (int i = 1; i <= ts.featureS(); ++i) {
+        vec = ts.getAFeature(i);
+        for (int j = 0; j < cf.size(); ++j) {
+            Point point(vec.at(ts.getFeatureN(cf.at(j).feature1)),
+                        vec.at(ts.getFeatureN(cf.at(j).feature2)));
+            if (dev(point, cf.at(j).lin_reg) > cf.at(j).threshold) {
+                string anomalyR = cf.at(j).feature1 + "-" + cf.at(j).feature2;
+                ar.push_back(AnomalyReport(anomalyR, i));
+            }
+        }
+    }
+    return ar;
+
+
+}
 
