@@ -12,14 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afea9a56-4548-499d-9e5f-35aa0f77fa53" name="Changes" comment="hi">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleAnomalyDetector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnomalyDetector.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimeSeries.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TimeSeries.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimeSeries.h" beforeDir="false" afterPath="$PROJECT_DIR$/TimeSeries.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anomaly_detection_util.h" beforeDir="false" afterPath="$PROJECT_DIR$/anomaly_detection_util.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hananelProject2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hananelProject2.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,7 @@
       <workItem from="1635856039843" duration="737000" />
       <workItem from="1635856815646" duration="1000" />
       <workItem from="1636546168679" duration="1232000" />
-      <workItem from="1636716826767" duration="14636000" />
+      <workItem from="1636716826767" duration="15345000" />
     </task>
     <task id="LOCAL‎00001" summary="hi">
       <created>1635176641454</created>
@@ -136,7 +129,13 @@
       <option name="presentableId" value="LOCAL‎00007" />
       <updated>1636723366910</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL‎00008" summary="hi">
+      <created>1636839411234</created>
+      <option name="number" value="LOCAL‎00008" />
+      <option name="presentableId" value="LOCAL‎00008" />
+      <updated>1636839411234</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
