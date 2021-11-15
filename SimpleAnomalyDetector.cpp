@@ -2,6 +2,7 @@
 // Created by rivka and vered on 09/11/2021.
 //
 
+#include <iostream>
 #include "SimpleAnomalyDetector.h"
 #include "TimeSeries.h"
 #include "anomaly_detection_util.h"
@@ -21,14 +22,14 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 
     for (int i = 0; i < ts.featureS() ; ++i) {
 
-        ts.getDataT();
+       // ts.getDataT();
 
         float maxValue = 0;
         float pears = 0;
         int index = 0;
         for (int j = i+1; j <ts.featureS() ; ++j) {
-           float feature1x[ts.getAFeature(i).size()];
-          float feature2y[ts.getAFeature(j).size()];
+            float feature1x[ts.getAFeature(i).size()];
+            float feature2y[ts.getAFeature(j).size()];
             for (int k = 1; k <ts.getAFeature(i).size(); ++k) {
                 feature1x[k] = ts.getAFeature(i).at(k);
                 feature2y[k] = ts.getAFeature(i).at(k);
@@ -40,32 +41,44 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
            }
         }
 
-        if(pears >= 0.9){
-           correlatedFeatures cr;
+        cout<<"hi";
+        if(maxValue >= 0.9){
+            cout<<"rivk";
+            cout<<"i"<<i<<"j"<<index<<maxValue;
+            correlatedFeatures cr;
             cr.corrlation = maxValue;
             cr.feature1 = ts.getTheFeaturesName().at(i);
             cr.feature2 = ts.getTheFeaturesName().at(index) ;
             cr.threshold = 0;
            // float feature1xPoint[cr->feature1.size()];
           //  float feature2yPoint[cr->feature2.size()];
-            Point *pointArray[cr.feature1.size()];
+            Point **pointArray = new Point*[cr.feature1.size()];
             for (int j = 0; j < cr.feature1.size(); ++j) {
+
+                pointArray[j] = new Point(ts.getAFeature(i)[j],ts.getAFeature(index)[j]);
+
                 //feature1xPoint[j] = ts.getAFeature(i)[j];
                // feature2yPoint[j] = ts.getAFeature(index)[j];
-                pointArray[j]->x = ts.getAFeature(i)[j];
-                pointArray[j]->y = ts.getAFeature(index)[j];
+                //pointArray[j]->x = ts.getAFeature(i)[j];
+               // pointArray[j]->y = ts.getAFeature(index)[j];
             }
-           cr.lin_reg = linear_reg(pointArray,cr.feature1.size());
+            cr.lin_reg = linear_reg(pointArray,cr.feature1.size());
             for (int j = 0; j < cr.feature1.size(); ++j) {
                 float deviation = dev(*pointArray[j], cr.lin_reg);
                 if(deviation > cr.threshold) {
                     cr.threshold = deviation*1.1;
                 }
-
-
             }
+
+
             this->cf.push_back(cr);
+
+            for (int j = 0; j < cr.feature1.size(); ++j) {
+                delete pointArray[j];
+            }
+            delete[] pointArray;
         }
+
     }
 }
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts) {
